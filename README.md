@@ -1,3 +1,11 @@
+Modifications since 1.7beta
+---
+####1.7.5beta
+- Fixed some issues in `mufunctions.php` that was trying to redefine some already defined constants
+- Fixed an issue where `$ydb` was not getting init'd before use
+- Fixed an issue where the code was using a string instead of a array for the PDO function in `admin.php`
+- Cleaned up some styling so that it's more in line with YOURLS coding standard
+
 yourls-multi-user plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
