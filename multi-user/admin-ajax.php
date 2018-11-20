@@ -2,7 +2,7 @@
 @session_start();
 define( 'YOURLS_ADMIN', true );
 define( 'YOURLS_AJAX', true );
-include_once "../../../includes/load-yourls.php";
+require_once YOURLS_INC . '/load-yourls.php';
 
 // This file will output a JSON string
 header( 'Content-type: application/json' );

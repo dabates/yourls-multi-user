@@ -1,13 +1,13 @@
 <?php
 @session_start();
-include_once( "mufunctions.php" );
+require_once "includes/mufunctions.php";
 
 /*
  Plugin Name: Multi User
  Plugin URI: http://www.matbra.com/code/multi-user-yourls-plugin/
  Description: Multi User Support
- Version: 1.7.5beta
- Author: Matheus (X-warrior) - matheusbrat@gmail.com
+ Version: 1.7.6beta
+ Author: Matheus (X-warrior) - matheusbrat@gmail.com, David Bates - dabates77@gmail.com
  Author URI: http://matbra.com
  */
 
@@ -128,7 +128,7 @@ function trapLoadTemplateInfos( $args )
     if ( yourls_is_valid_user() === true ) {
         return;
     } else {
-        include( "infos.php" );
+        require "infos.php";
     }
 }
 

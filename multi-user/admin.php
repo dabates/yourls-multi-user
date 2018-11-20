@@ -1,5 +1,5 @@
 <?php
-include_once( "muhtmlfunctions.php" );
+require_once "includes/muhtmlfunctions.php";
 
 if ( YOURLS_PRIVATE === false || !defined( 'YOURLS_ABSPATH' ) ) {
     die(); // NO DIRECT CALLS IF PUBLIC OR if YOURLS_ABSPATH NOT DEFINED!

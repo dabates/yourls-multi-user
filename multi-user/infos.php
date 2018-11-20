@@ -1,9 +1,9 @@
 <?php
 // TODO: make things cleaner. This file is an awful HTML/PHP soup.
 define( 'YOURLS_INFOS', true );
-include_once YOURLS_INC . '/load-yourls.php';
-include_once YOURLS_INC . '/functions-infos.php';
-include_once "muhtmlfunctions.php";
+require_once YOURLS_INC . '/load-yourls.php';
+require_once YOURLS_INC . '/functions-infos.php';
+require_once "includes/muhtmlfunctions.php";
 
 global $ydb;
 

@@ -298,10 +298,7 @@ function muAdminUrl( $page = '' )
 
 function isLogged()
 {
-    if ( !empty( $_SESSION['user'] ) && isset( $_SESSION['user'] ) ) {
-        return true;
-    }
-    return false;
+    return ( !empty( $_SESSION['user'] ) && isset( $_SESSION['user'] ));
 }
 
 function isAdmin()
