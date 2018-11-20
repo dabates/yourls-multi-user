@@ -90,7 +90,7 @@ function mu_html_menu()
 		//]]>
 		</script>";
     ?>
-
+    <script type="text/javascript" src="/js/insert.js"></script>
     <ul id="admin_menu">
         <li><a href="<?php echo YOURLS_SITE; ?>">Home</a> <?php
             if ( isLogged() ) {

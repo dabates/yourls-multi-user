@@ -1,5 +1,11 @@
 Modifications since 1.7beta
 ---
+####1.7.8beta
+- Fixes the Edit Button in the admin
+- Fixes the Delete button in the admin
+- Fixes a issue with MU adding https when ssl is not enabled
+- Fixes a missing include
+
 ####1.7.7beta
 - Fixes issue introduced using PDO earlier, with the `$where` variable
 

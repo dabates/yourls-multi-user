@@ -2,7 +2,8 @@
 @session_start();
 define( 'YOURLS_ADMIN', true );
 define( 'YOURLS_AJAX', true );
-require_once YOURLS_INC . '/load-yourls.php';
+require_once '../../../includes/load-yourls.php';
+require_once 'includes/mufunctions.php';
 
 // This file will output a JSON string
 header( 'Content-type: application/json' );

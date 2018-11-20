@@ -273,7 +273,7 @@ function mu_table_add_row( $keyword, $url, $title = '', $ip, $clicks, $timestamp
 
     $actions
              = <<<ACTION
-<a href="$statlink" id="statlink-$id" title="Stats" class="button button_stats">Stats</a><a href="" id="share-button-$id" name="share-button" title="Share" class="button button_share" onclick="toggle_share('$id');return false;">Share</a><a href="$edit_link" id="edit-button-$id" name="edit-button" title="Edit" class="button button_edit" onclick="edit('$id');return false;">Edit</a><a href="$delete_link" id="delete-button-$id" name="delete-button" title="Delete" class="button button_delete" onclick="remove('$id');return false;">Delete</a>
+<a href="$statlink" id="statlink-$id" title="Stats" class="button button_stats">Stats</a><a href="" id="share-button-$id" name="share-button" title="Share" class="button button_share" onclick="toggle_share('$id');return false;">Share</a><a href="$edit_link" id="edit-button-$id" name="edit-button" title="Edit" class="button button_edit" onclick="edit_link_display('$id');return false;">Edit</a><a href="$delete_link" id="delete-button-$id" name="delete-button" title="Delete" class="button button_delete" onclick="remove_link('$id');return false;">Delete</a>
 ACTION;
     $actions = yourls_apply_filter( 'action_links', $actions, $keyword, $url, $ip, $clicks, $timestamp );
 
@@ -289,7 +289,7 @@ ROW;
 function muAdminUrl( $page = '' )
 {
     $admin = YOURLS_SITE . '/user/plugins/multi-user/' . $page;
-    if ( defined( 'YOURLS_ADMIN_SSL' ) ) {
+    if ( defined( 'YOURLS_ADMIN_SSL' ) && YOURLS_ADMIN_SSL) {
         $admin = str_replace( 'http:', 'https:', $admin );
     }
 
