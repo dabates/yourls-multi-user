@@ -54,7 +54,7 @@ if ( ( verifyUrlOwner( $keyword, $user["id"] ) && YOURLS_MULTIUSER_PROTECTED ===
     if ( yourls_do_log_redirect() ) {
 
         // Duplicate keywords, if applicable
-        $keyword_list = yourls_get_duplicate_keywords( $longurl );
+        $keyword_list = yourls_get_keyword_longurl( $longurl );
 
         // Fetch all information from the table log
         $table = YOURLS_DB_TABLE_LOG;
@@ -194,7 +194,7 @@ if ( ( verifyUrlOwner( $keyword, $user["id"] ) && YOURLS_MULTIUSER_PROTECTED ===
     <h2 id="informations"><?php echo $title; ?></h2>
 
     <h3><span class="label">Short URL:</span> <img
-            src="<?php echo yourls_match_current_protocol( YOURLS_SITE ); ?>/images/favicon.gif"/>
+                src="<?php echo yourls_match_current_protocol( YOURLS_SITE ); ?>/images/favicon.gif"/>
         <?php if ( $aggregate ) {
             $i = 0;
             foreach ( $keyword_list as $k ) {
