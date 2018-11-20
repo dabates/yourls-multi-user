@@ -47,6 +47,10 @@ if ( !defined( 'YOURLS_MULTIUSER_LDAP_GROUPNAME' ) ) {
     define( 'YOURLS_MULTIUSER_LDAP_RESTRICT', false );
 }
 
+if (!defined('YOURLS_MULTIUSER_USE_PROXY_SCRIPT')) {
+    define('YOURLS_MULTIUSER_USE_PROXY_SCRIPT', false);
+}
+
 function captchaEnabled()
 {
     if ( defined( 'YOURLS_MULTIUSER_CAPTCHA' ) && ( YOURLS_MULTIUSER_CAPTCHA == true ) )
@@ -289,6 +293,11 @@ ROW;
 function muAdminUrl( $page = '' )
 {
     $admin = YOURLS_SITE . '/user/plugins/multi-user/' . $page;
+
+    if (YOURLS_MULTIUSER_USE_PROXY_SCRIPT  && stripos($page, 'index.php') !== false) {
+        $admin = YOURLS_SITE . "/" . YOURLS_MULTIUSER_USE_PROXY_SCRIPT . substr($page, strpos($page, '?'));
+    }
+
     if ( defined( 'YOURLS_ADMIN_SSL' ) && YOURLS_ADMIN_SSL) {
         $admin = str_replace( 'http:', 'https:', $admin );
     }

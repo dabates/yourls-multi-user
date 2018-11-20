@@ -78,6 +78,9 @@ if ( !isLogged() ) {
                         if ( !empty( $results ) ) {
                             $token = $results[0]->user_token;
                             $error_msg = "User $username added with token $token.";
+                            if (YOURLS_MULTIUSER_USE_PROXY_SCRIPT)
+                                yourls_redirect( YOURLS_SITE . '/' . YOURLS_MULTIUSER_USE_PROXY_SCRIPT, 302 );
+
                             require_once 'forms/form.php';
                         } else {
                             require_once 'forms/formjoin.php';

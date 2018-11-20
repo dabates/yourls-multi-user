@@ -69,7 +69,7 @@ function mu_html_signupForm( $error_msg = '' )
                 ?>
             </p>
 
-
+            <p>
             <input type="submit" id="submit" name="submit" value="Join!"
                    class="button"/>
             </p>
@@ -92,19 +92,12 @@ function mu_html_menu()
     ?>
     <script type="text/javascript" src="/js/insert.js"></script>
     <ul id="admin_menu">
-        <li><a href="<?php echo YOURLS_SITE; ?>">Home</a> <?php
-            if ( isLogged() ) {
-            ?>
-
-        <li><a href="<?php echo muAdminUrl( 'index.php?act=logout' ); ?>">Logout</a>
-        </li>
-        <?php
-        } else {
-            ?>
+        <li><a href="<?php echo YOURLS_SITE; ?>">Home</a>
+        <?php if ( isLogged() ): ?>
+        <li><a href="<?php echo muAdminUrl( 'index.php?act=logout' ); ?>">Logout</a></li>
+        <?php else: ?>
             <li><a href="<?php echo muAdminUrl( 'index.php' ); ?>">Log in</a></li>
-            <?php
-        }
-        ?>
+        <?php endif; ?>
     </ul>
     <?php
 }

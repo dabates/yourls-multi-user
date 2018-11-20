@@ -1,5 +1,9 @@
 Modifications since 1.7beta
 ---
+####1.7.10beta
+- Cleaned up some php code for template syntax
+- Added the concept of a proxy script so that you can "mask" your `/user/plugins/multi-user`
+
 ####1.7.9beta
 - Changed the include for the `load-urls.php` so that we can use this for other plugins
 
