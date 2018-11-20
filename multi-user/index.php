@@ -1,7 +1,7 @@
 <?php
 @session_start();
 // this needs to be a relative url, as we haven't loaded this constant yet
-require_once '../../../includes/load-yourls.php';
+require_once dirname(__FILE__) . '/../../../includes/load-yourls.php';
 require_once "includes/mufunctions.php";
 require_once "includes/muhtmlfunctions.php";
 

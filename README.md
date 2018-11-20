@@ -1,5 +1,8 @@
 Modifications since 1.7beta
 ---
+####1.7.9beta
+- Changed the include for the `load-urls.php` so that we can use this for other plugins
+
 ####1.7.8beta
 - Fixes the Edit Button in the admin
 - Fixes the Delete button in the admin

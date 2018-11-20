@@ -2,7 +2,7 @@
 @session_start();
 define( 'YOURLS_ADMIN', true );
 define( 'YOURLS_AJAX', true );
-require_once '../../../includes/load-yourls.php';
+require_once dirname(__FILE__) . '/../../../includes/load-yourls.php';
 require_once 'includes/mufunctions.php';
 
 // This file will output a JSON string
