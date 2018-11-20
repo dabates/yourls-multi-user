@@ -1,12 +1,14 @@
 Modifications since 1.7beta
 ---
+####1.7.7beta
+- Fixes issue introduced using PDO earlier, with the `$where` variable
+
 ####1.7.6beta
 - Cleaned up the workspace a bit
 - Changed `include`s to `require`s as, if any of the files we are including are missing, it should error
 - Made sure all require's had the same syntax (no parens)
 - Change any relative require's to use `YOURS_INC` instead.
 - Cleaned up the `isLogged()` function inside `mufunctions.php`
-
  
 ####1.7.5beta
 - Fixed some issues in `mufunctions.php` that was trying to redefine some already defined constants

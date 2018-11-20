@@ -133,7 +133,6 @@ if ( isLogged() ) {
     $total_urls     = $total_clicks = 0;
 
     if ( !isAdmin() ) {
-        // $where .= " and `keyword` in (select url_keyword from `$tableUrlToUser` where `users_user_id` = '" . $user["id"] . "') ";
         $where = [
             "sql"   => " and `keyword` in (select url_keyword from `$tableUrlToUser` where `users_user_id` = '" . $user["id"] . "') ",
             "binds" => [],
@@ -293,7 +292,7 @@ if ( isLogged() ) {
         <tbody>
         <?php
         // Main Query
-        $url_results = $ydb->get_results( "SELECT * FROM `$table_url` WHERE 1=1 $where ORDER BY `$sort_by_sql` $sort_order_sql LIMIT $offset, $perpage;" );
+        $url_results = $ydb->get_results( "SELECT * FROM `$table_url` WHERE 1=1 {$where['sql']} ORDER BY `$sort_by_sql` $sort_order_sql LIMIT $offset, $perpage;" );
         $found_rows  = false;
         if ( $url_results ) {
             $found_rows = true;
